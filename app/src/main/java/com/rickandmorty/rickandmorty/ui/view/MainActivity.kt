@@ -1,7 +1,8 @@
-package com.rickandmorty.rickandmorty
+package com.rickandmorty.rickandmorty.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.rickandmorty.rickandmorty.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
