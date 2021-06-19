@@ -1,5 +1,7 @@
-package com.rickandmorty.rickandmorty.ui.view
+package com.rickandmorty.rickandmorty.ui.presentation
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -20,10 +22,21 @@ class AdapterCharacters(private val characters: List<Character>) :
         holder.specie.text = characters[position].species
         holder.gender.text = characters[position].gender
         Picasso.get().load(characters[position].image).into(holder.photo)
+
+        holder.itemView.setOnClickListener {
+            goToCharacterInformation(holder.itemView.context, characters[position])
+        }
     }
 
     override fun getItemCount(): Int {
         return characters.size
+    }
+
+    private fun goToCharacterInformation(context: Context, character: Character) {
+        val intent = Intent(context, CharacterInformation::class.java).apply {
+            putExtra("characterInformation", character)
+        }
+        context.startActivity(intent)
     }
 }
 
