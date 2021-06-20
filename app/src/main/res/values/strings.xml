@@ -5,6 +5,7 @@
     <string name="characters">Personajes</string>
     <string name="locations">Ubicaciones</string>
     <string name="episodes">Episodios</string>
+    <string name="profile">Perfil</string>
 
     <string name="status">Estado: %s</string>
     <string name="species">Especie: %s</string>
@@ -18,4 +19,5 @@
     <string name="welcome">Bienvenido a</string>
     <string name="login_text">Para acceder es obligatorio iniciar sesión</string>
     <string name="error_massage">"Houston, tenemos un problema!"</string>
+    <string name="sign_out">"Cerrar sesión</string>
 </resources>

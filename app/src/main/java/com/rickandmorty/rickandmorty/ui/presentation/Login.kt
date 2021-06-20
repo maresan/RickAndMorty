@@ -17,6 +17,7 @@ import com.rickandmorty.rickandmorty.ui.presentation.main.MainActivity
 const val GOOGLE_SIGN_IN = 1000
 private const val EMAIL = "email"
 private const val USER_NAME = "user_name"
+private const val PHOTO = "photo"
 
 class Login : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -67,7 +68,7 @@ class Login : AppCompatActivity() {
                     FirebaseAuth.getInstance().signInWithCredential(credential)
                         .addOnCompleteListener {
                             if (it.isSuccessful) {
-                                saveSession(account.email ?: "", account.displayName ?: "")
+                                saveSession(account.email ?: "", account.displayName ?: "", account.photoUrl.toString())
                                 goToMainActivity()
                             } else {
                                 showError()
@@ -90,10 +91,11 @@ class Login : AppCompatActivity() {
         return false
     }
 
-    private fun saveSession(email: String, userName: String) {
+    private fun saveSession(email: String, userName: String, photo: String) {
         val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
         prefs.putString(USER_NAME, userName)
         prefs.putString(EMAIL, email)
+        prefs.putString(PHOTO, photo)
         prefs.apply()
     }
 
