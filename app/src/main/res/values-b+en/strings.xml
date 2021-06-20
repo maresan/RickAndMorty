@@ -10,4 +10,5 @@
     <string name="gender">Gender: %s</string>
     <string name="origin">Origin: %s</string>
     <string name="location">Location: %s</string>
+    <string name="residents">Residents: %s</string>
 </resources>
