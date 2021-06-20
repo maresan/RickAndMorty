@@ -2,6 +2,9 @@
     <string name="app_name">Rick And Morty</string>
 
     <string name="characters">Personajes</string>
+    <string name="locations">Ubicaciones</string>
+    <string name="episodes">Episodios</string>
+
     <string name="status">Estado: %s</string>
     <string name="species">Especie: %s</string>
     <string name="type">Tipo: %s</string>

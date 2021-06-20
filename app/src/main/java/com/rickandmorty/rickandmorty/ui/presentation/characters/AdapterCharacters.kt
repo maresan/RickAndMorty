@@ -1,4 +1,4 @@
-package com.rickandmorty.rickandmorty.ui.presentation
+package com.rickandmorty.rickandmorty.ui.presentation.characters
 
 import android.content.Context
 import android.content.Intent
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.rickandmorty.rickandmorty.R
 import com.rickandmorty.rickandmorty.databinding.AdapterCharactersBinding
 import com.rickandmorty.rickandmorty.model.Character
+import com.rickandmorty.rickandmorty.ui.presentation.characterinformation.CharacterInformation
 import com.squareup.picasso.Picasso
 
 private const val CHARACTER_INFO = "characterInformation"
