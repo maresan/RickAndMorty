@@ -17,24 +17,18 @@ class FragmentCharacters : Fragment() {
     private lateinit var adapterCharacters: AdapterCharacters
     private val characterViewModel: CharacterViewModel by viewModels()
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        characterViewModel.onCreate()
-        characterViewModel.characterModel.observe(viewLifecycleOwner, { initRecyclerView(it) })
-    }
-
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentCharactersBinding.inflate(inflater, container, false)
         return binding.root
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance(): FragmentCharacters = FragmentCharacters()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        characterViewModel.onCreate()
+        characterViewModel.characterModel.observe(viewLifecycleOwner, { initRecyclerView(it) })
     }
 
     private fun initRecyclerView(responseCharacter: ResponseCharacter) {

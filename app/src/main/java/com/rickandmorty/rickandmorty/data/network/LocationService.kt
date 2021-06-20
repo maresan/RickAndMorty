@@ -1,16 +1,16 @@
 package com.rickandmorty.rickandmorty.data.network
 
 import com.rickandmorty.rickandmorty.core.RetrofitHelper
-import com.rickandmorty.rickandmorty.model.ResponseCharacter
+import com.rickandmorty.rickandmorty.model.ResponseLocation
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class CharacterService {
+class LocationService {
     private val retrofit = RetrofitHelper.getBaseUrl()
 
-    suspend fun getCharacters(): ResponseCharacter {
+    suspend fun getLocations(): ResponseLocation {
         return withContext(Dispatchers.IO) {
-            val response = retrofit.create(CharacterApiClient::class.java).getCharacters()
+            val response = retrofit.create(LocationsApiClient::class.java).getLocations()
             response.body()!!
         }
     }

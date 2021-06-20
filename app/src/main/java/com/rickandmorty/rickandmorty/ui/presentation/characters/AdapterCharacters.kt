@@ -13,11 +13,10 @@ import com.squareup.picasso.Picasso
 
 private const val CHARACTER_INFO = "characterInformation"
 
-class AdapterCharacters(private val characters: List<Character>) :
-    RecyclerView.Adapter<CharactersViewHolder>() {
+class AdapterCharacters(private val characters: List<Character>) : RecyclerView.Adapter<CharactersViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharactersViewHolder {
-        val binding =
-            AdapterCharactersBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = AdapterCharactersBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CharactersViewHolder(binding)
     }
 
