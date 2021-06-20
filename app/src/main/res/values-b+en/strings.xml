@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Rick And Morty</string>
+
     <string name="locations">Locations</string>
     <string name="episodes">Episodes</string>
 
@@ -11,4 +12,8 @@
     <string name="origin">Origin: %s</string>
     <string name="location">Location: %s</string>
     <string name="residents">Residents: %s</string>
+
+    <string name="google">Google</string>
+    <string name="welcome">Welcome to</string>
+    <string name="login_text">To access it is mandatory to login</string>
 </resources>
