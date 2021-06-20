@@ -8,6 +8,7 @@ import com.rickandmorty.rickandmorty.databinding.ActivityMainBinding
 import com.rickandmorty.rickandmorty.ui.presentation.characters.FragmentCharacters
 import com.rickandmorty.rickandmorty.ui.presentation.episodes.FragmentEpisodes
 import com.rickandmorty.rickandmorty.ui.presentation.locations.FragmentLocations
+import com.rickandmorty.rickandmorty.ui.presentation.profile.FragmentProfile
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private val fragmentCharacters = FragmentCharacters()
     private val fragmentLocations = FragmentLocations()
     private val fragmentEpisodes = FragmentEpisodes()
+    private val fragmentProfile = FragmentProfile()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +29,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_characters -> setCurrentFragment(fragmentCharacters)
                 R.id.navigation_locations -> setCurrentFragment(fragmentLocations)
                 R.id.navigation_episodes -> setCurrentFragment(fragmentEpisodes)
+                R.id.navigation_profile -> setCurrentFragment(fragmentProfile)
             }
             true
         }

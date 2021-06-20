@@ -17,9 +17,4 @@ class FragmentEpisodes : Fragment() {
         binding = FragmentEpisodesBinding.inflate(inflater, container, false)
         return binding.root
     }
-
-    companion object {
-        @JvmStatic
-        fun newInstance(): FragmentEpisodes = FragmentEpisodes()
-    }
 }
