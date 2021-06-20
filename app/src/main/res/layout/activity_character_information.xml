@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/margin_medium"
-    tools:context=".ui.presentation.CharacterInformation">
+    tools:context=".ui.presentation.characterinformation.CharacterInformation">
 
     <ImageView
         android:id="@+id/image"

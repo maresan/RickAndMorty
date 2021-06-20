@@ -1,4 +1,4 @@
-package com.rickandmorty.rickandmorty.ui.presentation
+package com.rickandmorty.rickandmorty.ui.presentation.characterinformation
 
 import android.os.Bundle
 import android.view.View
