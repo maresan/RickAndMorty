@@ -1,4 +1,4 @@
-package com.rickandmorty.rickandmorty.ui.presentation
+package com.rickandmorty.rickandmorty.ui.presentation.login
 
 import android.content.Context
 import android.content.Intent
