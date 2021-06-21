@@ -96,8 +96,7 @@ class CharacterInformation : AppCompatActivity() {
     }
 
     private fun initRecyclerView(episodes: MutableList<Episode>) {
-        adapterEpisodes =
-            ListOfEpisodesAdapter(episodes.sortedBy { it.episode } as MutableList<Episode>)
+        adapterEpisodes = ListOfEpisodesAdapter(episodes.sortedBy { it.episode } as MutableList<Episode>)
         binding.recyclerview.apply {
             layoutManager = LinearLayoutManager(this.context)
             adapter = adapterEpisodes

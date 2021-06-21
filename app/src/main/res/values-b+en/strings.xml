@@ -14,6 +14,8 @@
     <string name="origin">Origin: %s</string>
     <string name="location">Location: %s</string>
     <string name="residents">Residents: %s</string>
+    <string name="created">Created: %s</string>
+    <string name="air_date">Air date: %s</string>
     <string name="characters_amount">Characters: %s</string>
     <string name="episode_name">%s (%s)</string>
 
