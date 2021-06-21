@@ -26,8 +26,8 @@ class FragmentEpisodes : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        episodeViewModel.onCreate()
-        episodeViewModel.episodeModel.observe(viewLifecycleOwner, {initRecyclerView(it)})
+        episodeViewModel.getAllEpisodes()
+        episodeViewModel.allEpisodesModel.observe(viewLifecycleOwner, {initRecyclerView(it)})
     }
 
     private fun initRecyclerView(responseEpisode: ResponseEpisode) {

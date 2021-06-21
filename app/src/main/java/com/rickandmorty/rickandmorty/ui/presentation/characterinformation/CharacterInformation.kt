@@ -1,18 +1,26 @@
 package com.rickandmorty.rickandmorty.ui.presentation.characterinformation
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.rickandmorty.rickandmorty.R
 import com.rickandmorty.rickandmorty.databinding.ActivityCharacterInformationBinding
 import com.rickandmorty.rickandmorty.model.Character
+import com.rickandmorty.rickandmorty.model.Episode
+import com.rickandmorty.rickandmorty.ui.viewmodel.EpisodeViewModel
 import com.squareup.picasso.Picasso
 
 private const val CHARACTER_INFO = "characterInformation"
 
 class CharacterInformation : AppCompatActivity() {
     private lateinit var binding: ActivityCharacterInformationBinding
+    private val episodeViewModel: EpisodeViewModel by viewModels()
+    private lateinit var adapterEpisodes: ListOfEpisodesAdapter
     private lateinit var characterInformation: Character
+    private val listOfEpisodes: MutableList<Episode> = mutableListOf()
 
     override fun onBackPressed() {
         finish()
@@ -31,6 +39,7 @@ class CharacterInformation : AppCompatActivity() {
         characterInformation = intent.extras?.get(CHARACTER_INFO) as Character
         initActionBar(characterInformation.name)
         initView(characterInformation)
+        getEpisodes()
     }
 
     private fun initActionBar(name: String) {
@@ -73,6 +82,24 @@ class CharacterInformation : AppCompatActivity() {
         if (characterInformation.location.name.isNotEmpty()) {
             binding.location.text = getString(R.string.location, characterInformation.location.name)
             binding.location.visibility = View.VISIBLE
+        }
+    }
+
+    private fun getEpisodes() {
+        for (element in characterInformation.episode) {
+            episodeViewModel.getEpisode(Uri.parse(element).lastPathSegment!!)
+        }
+        episodeViewModel.episodeModel.observe(this, {
+            listOfEpisodes.add(it)
+            initRecyclerView(listOfEpisodes)
+        })
+    }
+
+    private fun initRecyclerView(episodes: MutableList<Episode>) {
+        adapterEpisodes = ListOfEpisodesAdapter(episodes.sortedBy { it.episode } as MutableList<Episode>)
+        binding.recyclerview.apply {
+            layoutManager = LinearLayoutManager(this.context)
+            adapter = adapterEpisodes
         }
     }
 }

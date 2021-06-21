@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:layout_behavior="com.google.android.material.BottomSheet">
+
+    <View
+        android:layout_width="56dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:background="@color/design_default_color_primary" />
+
+    <TextView
+        android:id="@+id/episode_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_large"
+        tools:text="Episode name" />
+
+    <TextView
+        android:id="@+id/episode_characters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:gravity="center|start"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_small"
+        tools:text="Air date: " />
+
+    <TextView
+        android:id="@+id/episode_air_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:gravity="center|start"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_small"
+        tools:text="Air date: " />
+
+    <TextView
+        android:id="@+id/episode_created"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:gravity="center|start"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_small"
+        tools:text="Air date: " />
+</LinearLayout>
