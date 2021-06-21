@@ -14,6 +14,8 @@
     <string name="origin">Origin: %s</string>
     <string name="location">Location: %s</string>
     <string name="residents">Residents: %s</string>
+    <string name="characters_amount">Characters: %s</string>
+    <string name="episode_name">%s (%s)</string>
 
     <string name="google">Google</string>
     <string name="welcome">Welcome to</string>

@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.rickandmorty.rickandmorty.R
 import com.rickandmorty.rickandmorty.databinding.FragmentProfileBinding
-import com.rickandmorty.rickandmorty.ui.presentation.Login
+import com.rickandmorty.rickandmorty.ui.presentation.login.Login
 import com.squareup.picasso.Picasso
 import jp.wasabeef.picasso.transformations.CropCircleTransformation
 
