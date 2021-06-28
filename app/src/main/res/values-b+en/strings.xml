@@ -4,6 +4,7 @@
 
     <string name="characters">Characters</string>
     <string name="locations">Locations</string>
+    <string name="location">Location</string>
     <string name="episodes">Episodes</string>
     <string name="profile">Profile</string>
 
@@ -12,12 +13,14 @@
     <string name="type">Type: %s</string>
     <string name="gender">Gender: %s</string>
     <string name="origin">Origin: %s</string>
-    <string name="location">Location: %s</string>
+    <string name="location_name">Location: %s</string>
     <string name="residents">Residents: %s</string>
     <string name="created">Created: %s</string>
     <string name="air_date">Air date: %s</string>
     <string name="characters_amount">Characters: %s</string>
     <string name="episode_name">%s (%s)</string>
+    <string name="name">Name: %s</string>
+    <string name="dimension">Dimension: %s</string>
 
     <string name="google">Google</string>
     <string name="welcome">Welcome to</string>
