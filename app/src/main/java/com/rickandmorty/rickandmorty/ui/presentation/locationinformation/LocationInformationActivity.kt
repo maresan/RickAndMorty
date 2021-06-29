@@ -4,8 +4,10 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import com.rickandmorty.rickandmorty.R
 import com.rickandmorty.rickandmorty.databinding.ActivityLocationInformationBinding
+import com.rickandmorty.rickandmorty.model.Character
 import com.rickandmorty.rickandmorty.model.Location
 import com.rickandmorty.rickandmorty.ui.viewmodel.CharacterViewModel
 
@@ -13,9 +15,10 @@ private const val LOCATION_INFO = "location_info"
 
 class LocationInformationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLocationInformationBinding
-    private lateinit var locationInformation: Location
-
     private val characterViewModel: CharacterViewModel by viewModels()
+    private lateinit var adapterCharacter: CharacterAdapter
+    private val listOfCharacters: MutableList<Character> = mutableListOf()
+    private lateinit var locationInformation: Location
 
     override fun onBackPressed() {
         finish()
@@ -55,12 +58,21 @@ class LocationInformationActivity : AppCompatActivity() {
             getString(R.string.residents, locationInformation.residents.size.toString())
     }
 
-    private fun getCharacters(){
-        for (character in locationInformation.residents){
+    private fun getCharacters() {
+        for (character in locationInformation.residents) {
             characterViewModel.getCharacter(Uri.parse(character).lastPathSegment!!)
         }
         characterViewModel.characterModel.observe(this, {
-            print("ID " + it.id + " name " + it.name)
+            listOfCharacters.add(it)
+            initRecyclerView(listOfCharacters)
         })
+    }
+
+    private fun initRecyclerView(characters: MutableList<Character>) {
+        adapterCharacter = CharacterAdapter(characters)
+        binding.recyclerview.apply {
+            layoutManager = GridLayoutManager(this.context, 3)
+            adapter = adapterCharacter
+        }
     }
 }

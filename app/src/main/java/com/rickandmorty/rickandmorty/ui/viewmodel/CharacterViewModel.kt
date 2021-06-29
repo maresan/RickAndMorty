@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.rickandmorty.rickandmorty.domain.GetCharactersUseCase
 import com.rickandmorty.rickandmorty.model.Character
 import com.rickandmorty.rickandmorty.model.ResponseCharacter
+import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.launch
 
 class CharacterViewModel : ViewModel() {
