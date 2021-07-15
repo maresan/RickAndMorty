@@ -47,7 +47,6 @@ class CharacterInformation : AppCompatActivity() {
         actionBar?.let {
             actionBar.setDisplayHomeAsUpEnabled(true)
             actionBar.title = name
-            actionBar.elevation = 0.0f
         }
     }
 
@@ -80,7 +79,7 @@ class CharacterInformation : AppCompatActivity() {
         }
 
         if (characterInformation.location.name.isNotEmpty()) {
-            binding.location.text = getString(R.string.location, characterInformation.location.name)
+            binding.location.text = getString(R.string.location_name, characterInformation.location.name)
             binding.location.visibility = View.VISIBLE
         }
     }

@@ -28,6 +28,10 @@
             android:name=".ui.presentation.characterinformation.CharacterInformation"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.RickAndMorty" />
+        <activity
+            android:name=".ui.presentation.locationinformation.LocationInformationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RickAndMorty" />
     </application>
 
 </manifest>

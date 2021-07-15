@@ -27,8 +27,8 @@ class FragmentCharacters : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        characterViewModel.onCreate()
-        characterViewModel.characterModel.observe(viewLifecycleOwner, { initRecyclerView(it) })
+        characterViewModel.getAllCharacters()
+        characterViewModel.allCharactersModel.observe(viewLifecycleOwner, { initRecyclerView(it) })
     }
 
     private fun initRecyclerView(responseCharacter: ResponseCharacter) {

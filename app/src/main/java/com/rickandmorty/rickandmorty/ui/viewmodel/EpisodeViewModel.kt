@@ -29,7 +29,7 @@ class EpisodeViewModel : ViewModel() {
         viewModelScope.launch {
             val result = getEpisodeUseCase(episodeNumber)
 
-            if (result.characters.isNotEmpty()){
+            if (result.name.isNotEmpty()){
                 episodeModel.postValue(result)
             }
         }
