@@ -13,7 +13,8 @@
         android:theme="@style/Theme.Login">
         <activity
             android:name=".ui.presentation.login.Login"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
